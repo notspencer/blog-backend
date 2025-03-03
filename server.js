@@ -10,3 +10,4 @@ app.put('/posts/:id', (req, res) => res.json({ message: 'PUT a post by id' }));
 app.delete('/posts/:id', (req, res) => res.json({ message: 'DELETE a post by id' }));
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
+
