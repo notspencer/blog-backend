@@ -9,11 +9,11 @@ const User = sequelize.define(
             primaryKey: true,
             autoIncrement: true,
         },
-        lastName: {
+        last_name: {
             type: DataTypes.STRING(50),
             allowNull: false,
         },
-        firstName: {
+        first_name: {
             type: DataTypes.STRING(50),
             allowNull: false,
         },
@@ -22,11 +22,11 @@ const User = sequelize.define(
             allowNull: false,
             unique: true,
         },
-        passwordHash: {
+        password_hash: {
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        createdAt: {
+        created_at: {
             type: DataTypes.DATE,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
         },

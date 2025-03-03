@@ -14,7 +14,7 @@ const Post = sequelize.define(
             type: DataTypes.STRING(255),
             allowNull: false,
         },
-        authorId: {
+        author_id: {
             // Foreign key referencing User
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -32,7 +32,7 @@ const Post = sequelize.define(
             type: DataTypes.TEXT, // Assuming this stores a URL or file path
             allowNull: false,
         },
-        createdAt: {
+        created_at: {
             type: DataTypes.DATE,
             defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
@@ -44,9 +44,9 @@ const Post = sequelize.define(
 );
 
 // Define the relationship: Each Post belongs to a User
-Post.belongsTo(User, { foreignKey: 'authorId', as: 'author' });
+Post.belongsTo(User, { foreignKey: 'author_id', as: 'author' });
 
 // A User can have multiple Posts
-User.hasMany(Post, { foreignKey: 'authorId', as: 'posts' });
+User.hasMany(Post, { foreignKey: 'author_id', as: 'posts' });
 
 export default Post;

@@ -1,6 +1,10 @@
-// Import the Sequelize class from the library
 import { Sequelize } from 'sequelize';
-// Create a new instance of Sequelize with the connection string
-const sequelize = new Sequelize(process.env.PG_URI);
-// Export the instance so we can use it in other files
+import 'dotenv/config';
+
+// Use the connection string from your Neon dashboard
+const connectionString = process.env.PG_URI;
+
+// Initialize Sequelize with the connection string
+const sequelize = new Sequelize(connectionString);
+
 export default sequelize;
