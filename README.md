@@ -19,6 +19,18 @@ This is a simple backend API built with Node.js and Express, using PostgreSQL as
 -   PostgreSQL
 -   pg (Node.js PostgreSQL client)
 
+## Folder Structure
+
+src/
+++++controllers/userController.js
+++++controllers/postController.js
+++++models/User.js
+++++models/Post.js
+++++routes/userRoutes.js
+++++routes/postRoutes.js
+++++db/orm.js # Sequelize initialization
+index.js
+
 ## Installation
 
 1. Clone the repository:
