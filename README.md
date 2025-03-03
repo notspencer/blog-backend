@@ -11,13 +11,30 @@ This is a simple backend API built with Node.js and Express, using PostgreSQL as
 -   Create a new post
 -   Update an existing post by ID
 -   Delete a post by ID
-
+-   
+-   Retrieve all users
+-   Retrieve a single user by ID
+-   Create a new user
+-   Update an existing user by ID
+-   Delete a user by ID
 ## Technologies Used
 
 -   Node.js
 -   Express.js
 -   PostgreSQL
 -   pg (Node.js PostgreSQL client)
+
+## Folder Structure
+
+src/
+++++controllers/userController.js
+++++controllers/postController.js
+++++models/User.js
+++++models/Post.js
+++++routes/userRoutes.js
+++++routes/postRoutes.js
+++++db/orm.js # Sequelize initialization
+index.js
 
 ## Installation
 
