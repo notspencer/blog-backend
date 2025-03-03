@@ -26,8 +26,8 @@ export const getPostById = async (req, res) => {
 // Create a new post
 export const createPost = async (req, res) => {
     try {
-        const { title, content, cover, authorId } = req.body;
-        const post = await Post.create({ title, content, cover, authorId });
+        const { title, content, cover, author_id } = req.body;
+        const post = await Post.create({ title, content, cover, author_id });
         res.status(201).json(post);
     } catch (error) {
         res.status(400).json({ error: error.message });
