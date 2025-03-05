@@ -2,10 +2,11 @@ import express from 'express';
 import userRoutes from './routes/userRoutes.js';
 import postRoutes from './routes/postRoutes.js';
 import './db/orm.js'; // Import for side effects (to connect to the database)
+import cors from 'cors';
 
 // Create an express app
 const app = express();
-
+app.use(cors());
 // Set a port from the environment variable or default to 8080
 const port = process.env.PORT || 8080;
 
